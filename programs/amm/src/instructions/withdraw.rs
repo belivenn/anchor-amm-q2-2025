@@ -52,7 +52,7 @@ pub struct Withdraw<'info> {
     #[account(
         mut,
         associated_token::mint = mint_lp,
-        associated_token::authority = config,
+        associated_token::authority = user,
     )]
     pub user_lp: Account<'info, TokenAccount>,
     pub token_program: Program<'info, Token>,
